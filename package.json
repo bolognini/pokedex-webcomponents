@@ -1,0 +1,56 @@
+{
+  "name": "pokedex-webcomponents",
+  "version": "0.0.1",
+  "description": "Pokedex components",
+  "homepage": "https://github.com/bolognini/pokedex-webcomponents#readme",
+  "main": "dist/bundle.js",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "start": "npm run storybook",
+    "build": "webpack",
+    "build:watch": "webpack --watch --info-verbosity verbose",
+    "test": "karma start --coverage --legacy",
+    "test:watch": "karma start --legacy --auto-watch=true --single-run=false",
+    "lint:eslint": "eslint --ext .js,.html .",
+    "format:eslint": "eslint --ext .js,.html . --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "precommit": "npm run test && npm run lint:eslint",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@open-wc/eslint-config": "^0.4.5",
+    "@open-wc/testing": "^0.12.5",
+    "@open-wc/testing-karma": "^2.0.3",
+    "@storybook/addon-actions": "^5.1.1",
+    "@storybook/addon-knobs": "^5.1.1",
+    "@storybook/addon-links": "^5.1.1",
+    "@storybook/addon-notes": "^5.1.10",
+    "@storybook/polymer": "^5.1.1",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "husky": "^2.7.0",
+    "karma": "^4.1.0",
+    "lit-html": "^1.1.0",
+    "polymer-webpack-loader": "^2.0.3",
+    "raw-loader": "^3.1.0",
+    "sinon": "^7.3.2",
+    "storybook-dark-mode": "^0.1.4",
+    "to-string-loader": "^1.1.5",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.10"
+  },
+  "keywords": [
+    "pokedex"
+  ],
+  "author": "Matheus Bolognini",
+  "license": "ISC"
+}
