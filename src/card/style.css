@@ -1,18 +1,320 @@
+:host {
+  text-transform: capitalize;
+  font-family: sans-serif;
+}
+
+:host([background=normal]) .holder {
+  background-color: #a9a878;
+}
+
+:host([background=normal]) .id {
+  color: #a9a878;
+  filter: brightness(50%);
+}
+
+:host([background=normal]) ::slotted(span[type=type0]),
+:host([background=normal]) ::slotted(span[type=type1]) {
+  color: #a9a878;
+}
+
+:host([background=ghost]) .holder {
+  background-color: #715799;
+}
+
+:host([background=ghost]) .id {
+  color: #715799;
+  filter: brightness(50%);
+}
+
+:host([background=ghost]) ::slotted(span[type=type0]),
+:host([background=ghost]) ::slotted(span[type=type1]) {
+  color: #715799;
+}
+
+:host([background=poison]) .holder {
+  background-color: #a03fa1;
+}
+
+:host([background=poison]) .id {
+  color: #a03fa1;
+  filter: brightness(50%);
+}
+
+:host([background=poison]) ::slotted(span[type=type0]),
+:host([background=poison]) ::slotted(span[type=type1]) {
+  color: #a03fa1;
+}
+
+:host([background=bug]) .holder {
+  background-color: #a8b820;
+}
+
+:host([background=bug]) .id {
+  color: #a8b820;
+  filter: brightness(50%);
+}
+
+:host([background=bug]) ::slotted(span[type=type0]),
+:host([background=bug]) ::slotted(span[type=type1]) {
+  color: #a8b820;
+}
+
+:host([background=fight]) .holder {
+  background-color: #c02f27;
+}
+
+:host([background=fight]) .id {
+  color: #c02f27;
+  filter: brightness(50%);
+}
+
+:host([background=fight]) ::slotted(span[type=type0]),
+:host([background=fight]) ::slotted(span[type=type1]) {
+  color: #c02f27;
+}
+
+:host([background=flying]) .holder {
+  background-color: #a990f1;
+}
+
+:host([background=flying]) .id {
+  color: #a990f1;
+  filter: brightness(50%);
+}
+
+:host([background=flying]) ::slotted(span[type=type0]),
+:host([background=flying]) ::slotted(span[type=type1]) {
+  color: #a990f1;
+}
+
+:host([background=psychic]) .holder {
+  background-color: #f95788;
+}
+
+:host([background=psychic]) .id {
+  color: #f95788;
+  filter: brightness(50%);
+}
+
+:host([background=psychic]) ::slotted(span[type=type0]),
+:host([background=psychic]) ::slotted(span[type=type1]) {
+  color: #f95788;
+}
+
+:host([background=fire]) .holder {
+  background-color: #f17f2e;
+}
+
+:host([background=fire]) .id {
+  color: #f17f2e;
+  filter: brightness(50%);
+}
+
+:host([background=fire]) ::slotted(span[type=type0]),
+:host([background=fire]) ::slotted(span[type=type1]) {
+  color: #f17f2e;
+}
+
+:host([background=ice]) .holder {
+  background-color: #98d9d9;
+}
+
+:host([background=ice]) .id {
+  color: #98d9d9;
+  filter: brightness(50%);
+}
+
+:host([background=ice]) ::slotted(span[type=type0]),
+:host([background=ice]) ::slotted(span[type=type1]) {
+  color: #98d9d9;
+}
+
+:host([background=ground]) .holder {
+  background-color: #e2c168;
+}
+
+:host([background=ground]) .id {
+  color: #e2c168;
+  filter: brightness(50%);
+}
+
+:host([background=ground]) ::slotted(span[type=type0]),
+:host([background=ground]) ::slotted(span[type=type1]) {
+  color: #e2c168;
+}
+
+:host([background=water]) .holder {
+  background-color: #6890f0;
+}
+
+:host([background=water]) .id {
+  color: #6890f0;
+  filter: brightness(50%);
+}
+
+:host([background=water]) ::slotted(span[type=type0]),
+:host([background=water]) ::slotted(span[type=type1]) {
+  color: #6890f0;
+}
+
+:host([background=dragon]) .holder {
+  background-color: #7035ff;
+}
+
+:host([background=dragon]) .id {
+  color: #7035ff;
+  filter: brightness(50%);
+}
+
+:host([background=dragon]) ::slotted(span[type=type0]),
+:host([background=dragon]) ::slotted(span[type=type1]) {
+  color: #7035ff;
+}
+
+:host([background=rock]) .holder {
+  background-color: #b89f38;
+}
+
+:host([background=rock]) .id {
+  color: #b89f38;
+  filter: brightness(50%);
+}
+
+:host([background=rock]) ::slotted(span[type=type0]),
+:host([background=rock]) ::slotted(span[type=type1]) {
+  color: #b89f38;
+}
+
+:host([background=grass]) .holder {
+  background-color: #78c850;
+}
+
+:host([background=grass]) .id {
+  color: #78c850;
+  filter: brightness(50%);
+}
+
+:host([background=grass]) ::slotted(span[type=type0]),
+:host([background=grass]) ::slotted(span[type=type1]) {
+  color: #78c850;
+}
+
+:host([background=dark]) .holder {
+  background-color: #6f5747;
+}
+
+:host([background=dark]) .id {
+  color: #6f5747;
+  filter: brightness(50%);
+}
+
+:host([background=dark]) ::slotted(span[type=type0]),
+:host([background=dark]) ::slotted(span[type=type1]) {
+  color: #6f5747;
+}
+
+:host([background=steel]) .holder {
+  background-color: #b8b8d0;
+}
+
+:host([background=steel]) .id {
+  color: #b8b8d0;
+  filter: brightness(50%);
+}
+
+:host([background=steel]) ::slotted(span[type=type0]),
+:host([background=steel]) ::slotted(span[type=type1]) {
+  color: #b8b8d0;
+}
+
+:host([background=electric]) .holder {
+  background-color: #f9d130;
+}
+
+:host([background=electric]) .id {
+  color: #f9d130;
+  filter: brightness(50%);
+}
+
+:host([background=electric]) ::slotted(span[type=type0]),
+:host([background=electric]) ::slotted(span[type=type1]) {
+  color: #f9d130;
+}
+
+:host([background=fairy]) .holder {
+  background-color: #f79eab;
+}
+
+:host([background=fairy]) .id {
+  color: #f79eab;
+  filter: brightness(50%);
+}
+
+:host([background=fairy]) ::slotted(span[type=type0]),
+:host([background=fairy]) ::slotted(span[type=type1]) {
+  color: #f79eab;
+}
+
 :host .holder {
-  width: 400px;
-  height: 320px;
   display: grid;
+  height: 100%;
+  border-radius: 20px;
+  padding: 24px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  background-color: #4E4B63;
   color: white;
+}
+
+:host slot[name=name], .id {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.id {
+  text-align: right;
+}
+
+:host .types {
+  font-size: 24px;
+  font-weight: 500;
+  align-self: center; 
+}
+
+::slotted(span[type=type0]),
+::slotted(span[type=type1]) {
+  position: relative;
+  border: 1px solid white;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 8px 8px 8px 16px;
+  background: white;
+  width: 70%;
+}
+
+::slotted(span[type=type0])::after,
+::slotted(span[type=type1])::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 46px solid white;
+  border-right: 50px solid transparent;
+  top: -1px;
+  right: -51px;
+}
+
+#triangle-bottomleft {
+  width: 0;
+  height: 0;
 }
 
 :host img {
   width: 100%;
+  margin: auto auto auto 24px;
 }
 
 :host .types {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-gap: 16px;
 }
