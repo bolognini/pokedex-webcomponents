@@ -1,7 +1,18 @@
-:host div {
+:host .holder {
   width: 400px;
   height: 320px;
   display: grid;
-  grid-template: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   background-color: #4E4B63;
+  color: white;
+}
+
+:host img {
+  width: 100%;
+}
+
+:host .types {
+  display: flex;
+  flex-direction: column;
 }
