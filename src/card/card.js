@@ -16,13 +16,14 @@ template.innerHTML = `
 
 class Card extends HTMLElement {
   static get observedAttributes() {
-    return ['id', 'source', 'alt', 'background']
+    return ['name', 'id', 'source', 'alt', 'background']
   }
 
   constructor() {
     super()
     this._shadowRoot = this.attachShadow({ mode: 'open' })
     this._shadowRoot.appendChild(template.content.cloneNode(true))
+    this._name = this._shadowRoot.querySelector('[name=name]')
     this._id = this._shadowRoot.querySelector('.id')
     this._img = this._shadowRoot.querySelector('img')
     this._type0 = this._shadowRoot.querySelector('[name=type0]')
@@ -40,6 +41,10 @@ class Card extends HTMLElement {
     if (this._type1 && this._type1.assignedElements()[0]) {
       this._type1.assignedElements()[0].setAttribute('type', 'type1')
     }
+  }
+
+  set name(value) {
+    this._name.innerHTML = value
   }
 
   set id(value) {
