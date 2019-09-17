@@ -35,10 +35,10 @@ class Card extends HTMLElement {
   }
 
   connectedCallback() {
-    if (this._type0) {
+    if (this._type0.assignedElements().length > 0) {
       this._type0.assignedElements()[0].setAttribute('type', 'type0')
     }
-    if (this._type1 && this._type1.assignedElements()[0]) {
+    if (this._type1.assignedElements().length > 0) {
       this._type1.assignedElements()[0].setAttribute('type', 'type1')
     }
   }
@@ -47,19 +47,33 @@ class Card extends HTMLElement {
     this._name.innerHTML = value
   }
 
+  get name() {
+    return this.getAttribute('name')
+  }
+
   set id(value) {
     this._id.innerHTML = `#${value}`
+  }
+
+  get id() {
+    return this.getAttribute('id')
   }
 
   set source(value) {
     this._img.setAttribute('src', value)
   }
 
+  get source() {
+    return this.getAttribute('source')
+  }
+
   set alt(value) {
     this._img.setAttribute('alt', value)
   }
+
+  get alt() {
+    return this.getAttribute('alt')
+  }
 }
 
-if (!window.customElements.get('pokedex-card')) {
-  window.customElements.define('pokedex-card', Card)
-}
+window.customElements.define('pokedex-card', Card)
