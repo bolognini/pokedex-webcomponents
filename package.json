@@ -1,6 +1,6 @@
 {
   "name": "pokedex-webcomponents",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Pokedex components",
   "homepage": "https://github.com/bolognini/pokedex-webcomponents#readme",
   "main": "dist/bundle.js",

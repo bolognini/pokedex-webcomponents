@@ -14,46 +14,66 @@ template.innerHTML = `
   </div>
 `
 
-{/* <div>
-  <slot name='name'></slot>
-  <slot name='id'></slot>
-  <slot name='type0'></slot>
-  <slot name='type1'></slot>
-  <img src='https://assets.pokemon.com/assets/cms2/img/pokedex/full/094.png' />
-</div> */}
-
-{/* <pokedex-card>
-  <span slot='name'>{pokemon.name}</span>
-  <span slot='id'>#{pokemon.id}</span>
-  {pokemon.types && pokemon.types.map((item, index) => <span slot={`type${index}`}>{item.type.name}</span>)}
-</pokedex-card> */}
-
 class Card extends HTMLElement {
   static get observedAttributes() {
-    return ['name', 'id', 'source']
+    return ['name', 'id', 'source', 'alt', 'background']
   }
 
   constructor() {
     super()
     this._shadowRoot = this.attachShadow({ mode: 'open' })
     this._shadowRoot.appendChild(template.content.cloneNode(true))
+    this._name = this._shadowRoot.querySelector('[name=name]')
     this._id = this._shadowRoot.querySelector('.id')
-    this._source = this._shadowRoot.querySelector('img')
+    this._img = this._shadowRoot.querySelector('img')
+    this._type0 = this._shadowRoot.querySelector('[name=type0]')
+    this._type1 = this._shadowRoot.querySelector('[name=type1]')
   }
 
   attributeChangedCallback(name, _, newValue) {
     this[name] = newValue
   }
 
+  connectedCallback() {
+    if (this._type0.assignedElements().length > 0) {
+      this._type0.assignedElements()[0].setAttribute('type', 'type0')
+    }
+    if (this._type1.assignedElements().length > 0) {
+      this._type1.assignedElements()[0].setAttribute('type', 'type1')
+    }
+  }
+
+  set name(value) {
+    this._name.innerHTML = value
+  }
+
+  get name() {
+    return this.getAttribute('name')
+  }
+
   set id(value) {
     this._id.innerHTML = `#${value}`
   }
 
+  get id() {
+    return this.getAttribute('id')
+  }
+
   set source(value) {
-    this._source.setAttribute('src', value)
+    this._img.setAttribute('src', value)
+  }
+
+  get source() {
+    return this.getAttribute('source')
+  }
+
+  set alt(value) {
+    this._img.setAttribute('alt', value)
+  }
+
+  get alt() {
+    return this.getAttribute('alt')
   }
 }
 
-if (!window.customElements.get('pokedex-card')) {
-  window.customElements.define('pokedex-card', Card)
-}
+window.customElements.define('pokedex-card', Card)
