@@ -59,17 +59,17 @@
   color: #a8b820;
 }
 
-:host([background=fight]) .holder {
+:host([background=fighting]) .holder {
   background-color: #c02f27;
 }
 
-:host([background=fight]) .id {
+:host([background=fighting]) .id {
   color: #c02f27;
   filter: brightness(50%);
 }
 
-:host([background=fight]) ::slotted(span[type=type0]),
-:host([background=fight]) ::slotted(span[type=type1]) {
+:host([background=fighting]) ::slotted(span[type=type0]),
+:host([background=fighting]) ::slotted(span[type=type1]) {
   color: #c02f27;
 }
 
@@ -253,20 +253,6 @@
 :host([background=fairy]) ::slotted(span[type=type0]),
 :host([background=fairy]) ::slotted(span[type=type1]) {
   color: #f79eab;
-}
-
-:host([background=fighting]) .holder {
-  background-color: #af5545;
-}
-
-:host([background=fighting]) .id {
-  color: #af5545;
-  filter: brightness(50%);
-}
-
-:host([background=fighting]) ::slotted(span[type=type0]),
-:host([background=fighting]) ::slotted(span[type=type1]) {
-  color: #af5545;
 }
 
 :host .holder {
