@@ -255,6 +255,20 @@
   color: #f79eab;
 }
 
+:host([background=fighting]) .holder {
+  background-color: #af5545;
+}
+
+:host([background=fighting]) .id {
+  color: #af5545;
+  filter: brightness(50%);
+}
+
+:host([background=fighting]) ::slotted(span[type=type0]),
+:host([background=fighting]) ::slotted(span[type=type1]) {
+  color: #af5545;
+}
+
 :host .holder {
   display: grid;
   min-width: 350px;
