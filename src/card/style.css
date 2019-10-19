@@ -265,12 +265,28 @@
   grid-template-rows: 1fr 1fr;
   color: white;
   box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.3);
+  transition: all 120ms;
+}
+
+
+@keyframes atention {
+  0% {
+    transform: scale(1) rotate(4deg) translateY(-30px);
+  }
+  50% {
+    transform: scale(1.2) rotate(4deg) translateY(-30px);
+  }
+  100% {
+    transform: scale(1.15) rotate(4deg) translateY(-30px);
+  }
 }
 
 
 :host .holder:hover {
-  transition: 0.1s ease-in;
-  transform: translateY(-8px);
+  animation: atention .15s ease;
+  animation-fill-mode: forwards;
+  transition: all 120ms;
+  box-shadow: 12px 12px 0px 3px rgba(0, 0, 0, 1);
 }
 
 :host slot[name=name], .id {
@@ -315,6 +331,11 @@
   border-right: 50px solid transparent;
   top: -1px;
   right: -51px;
+}
+
+:host .holder:hover ::slotted(span[type=type0])::after,
+:host .holder:hover ::slotted(span[type=type1])::after {
+  right: -50px;
 }
 
 #triangle-bottomleft {

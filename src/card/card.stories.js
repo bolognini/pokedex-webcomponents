@@ -31,6 +31,7 @@ storiesOf('Pokedex Card', module)
 
     holder.style.width = text('Width', '400px')
     holder.style.height = text('Height', '230px')
+    holder.style.padding = '80px'
 
     return el
   }, {
