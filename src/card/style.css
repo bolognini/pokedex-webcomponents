@@ -268,6 +268,13 @@
   transition: all 120ms;
 }
 
+@media (min-width: 320px) and (max-width: 767px) {
+  :host .holder {
+    min-width: 300px;
+    padding: 16px;
+  }   
+}
+
 
 @keyframes atention {
   0% {
@@ -292,6 +299,12 @@
 :host slot[name=name], .id {
   font-size: 36px;
   font-weight: 600;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  :host slot[name=name], .id {
+    font-size: 32px;
+  } 
 }
 
 :host slot[name=name] {
